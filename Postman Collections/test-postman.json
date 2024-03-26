@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "d761104f-b47b-4a25-b0e4-e1f2351a4087",
+		"name": "restaurant",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateOrder",
+			"id": "5c794e21-04fd-42c2-83cf-659faa7e6227",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "https://localhost:7201/Orders/createOrder"
+			},
+			"response": [
+				{
+					"id": "dd23e4fe-9c61-41d7-83f1-82acccafccb5",
+					"name": "CreateOrder",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": "https://localhost:7201/Orders/createOrder"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Feb 2023 15:33:02 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"id\": \"0510df78-fb54-4bb0-bf21-44ad2b628185\"\n}"
+				}
+			]
+		},
+		{
+			"name": "UpdateOrder",
+			"id": "43613b17-587a-4454-bc10-27991f2c1375",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7201/Orders/updateOrder?id=025cbf3d-4b18-4705-a1fe-93898872d68a&productId=3&amount=540",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7201",
+					"path": [
+						"Orders",
+						"updateOrder"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "025cbf3d-4b18-4705-a1fe-93898872d68a"
+						},
+						{
+							"key": "productId",
+							"value": "3"
+						},
+						{
+							"key": "amount",
+							"value": "540"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "15dfb48f-3b88-4e39-bf91-dd6e4ead2c47",
+					"name": "CreateOrder",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": "https://localhost:7201/Orders/createOrder"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Feb 2023 15:33:02 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"id\": \"0510df78-fb54-4bb0-bf21-44ad2b628185\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GetOrders",
+			"id": "402cdb00-fb35-479d-8453-342e3a207b9d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://localhost:7201/Orders/"
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrder",
+			"id": "024425b6-a883-4c06-bf6c-e9443f95cb2e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": {
+						"addTokenTo": "header",
+						"scope": "{{Scopes}}",
+						"clientId": "{{ClientId}}",
+						"client_authentication": "body",
+						"clientSecret": "{{ClientSecret}}",
+						"accessTokenUrl": "{{TokenEndpoint}}",
+						"authUrl": "{{AuthorizationEndpoint}}",
+						"redirect_uri": "https://oauth.pstmn.io/v1/callback",
+						"grant_type": "authorization_code_with_pkce",
+						"tokenName": "{{env}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7201/Orders/search?orderId=025cbf3d-4b18-4705-a1fe-93898872d68a",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7201",
+					"path": [
+						"Orders",
+						"search"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "025cbf3d-4b18-4705-a1fe-93898872d68a"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
