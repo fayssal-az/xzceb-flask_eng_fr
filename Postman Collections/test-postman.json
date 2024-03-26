@@ -190,7 +190,25 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7201/Orders/search?orderId=025cbf3d-4b18-4705-a1fe-93898872d68a",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7201",
+					"path": [
+						"Orders",
+						"search"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "025cbf3d-4b18-4705-a1fe-93898872d68a"
+						}
+					]
+				}
 			},
 			"response": []
 		}
